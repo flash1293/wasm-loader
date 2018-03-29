@@ -97,3 +97,6 @@ Default `importsObject` is meant to be used for a very basic wasm module. Most l
 imports to match the requirements of your wasm module(s). Some options are compiling your source code into S-syntax(`.wast`) examining that output, checking the imports. Compile the s-syntax file with
 `asm2wasm` into the final wasm module.
 
+## Additional dependencies
+
+The module [base64-arraybuffer](https://github.com/niklasvh/base64-arraybuffer) is embedded into `index.js` and `output.js` to inline the WASM code as base64 string instead of an array of numbers to speed up the build-process with webpack and to possibly increase client side parsing speed.
